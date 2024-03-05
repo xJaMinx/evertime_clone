@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tv_id"
+        android:title="아이디"/>
+    <item
+        android:id="@+id/tv_password_change"
+        android:title="비밀번호 변경"/>
+    <item
+        android:id="@+id/tv_email_change"
+        android:title="이메일 변경"/>
+</menu>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/bt_back"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="right"
+            android:background="#00000000"
+            android:baselineAlignBottom="false"
+            android:scaleType="fitEnd"
+            app:srcCompat="@drawable/ic_delete" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.2"
+            android:text="회원가입"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etv_id"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/box_custom"
+            android:ems="10"
+            android:hint="아이디"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="12dp"
+            android:textColor="#000000"
+            android:textColorHint="#909090"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etv_password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/box_custom"
+            android:ems="10"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:paddingLeft="12dp"
+            android:textColorHint="#909090"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etv_password_check"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/box_custom"
+            android:ems="10"
+            android:hint="비밀번호 확인"
+            android:inputType="textPassword"
+            android:paddingLeft="12dp"
+            android:textColorHint="#909090"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etv_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/box_custom"
+            android:ems="10"
+            android:hint="이름"
+            android:inputType="textPassword"
+            android:paddingLeft="12dp"
+            android:textColorHint="#909090"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/bt_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/login_box_custom"
+            android:text="회원가입"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

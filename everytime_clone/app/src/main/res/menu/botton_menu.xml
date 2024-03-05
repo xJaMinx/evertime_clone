@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="홈"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/timetable"
+        android:title="시간표"
+        android:icon="@drawable/ic_timetable"/>
+    <item
+        android:id="@+id/noticeboard"
+        android:title="게시판"
+        android:icon="@drawable/ic_noticeboard"/>
+    <item
+        android:id="@+id/chatting"
+        android:title="채팅"
+        android:icon="@drawable/ic_cheatting"/>
+    <item
+        android:id="@+id/campuspick"
+        android:title="캠퍼스픽"
+        android:icon="@drawable/ic_campuspick"/>
+</menu>

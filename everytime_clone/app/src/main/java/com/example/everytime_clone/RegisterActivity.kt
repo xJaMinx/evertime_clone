@@ -1,49 +1,27 @@
 package com.example.everytime_clone
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
-import androidx.appcompat.app.AppCompatActivity
-import com.example.everytime_clone.databinding.ActivityMainBinding
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat
+import com.example.everytime_clone.databinding.ActivityRegisterBinding
 
-
-class MainActivity : AppCompatActivity() {
-
-    private var mBinding: ActivityMainBinding? = null
+class RegisterActivity : AppCompatActivity() {
+    private var mBinding: ActivityRegisterBinding? = null
     // 매번 null 체크를 할 필요 없이 편의성을 위해 바인딩 변수 재 선언
     private val binding get() = mBinding!!
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        // 뷰 바인딩 초기화
-        mBinding = ActivityMainBinding.inflate(layoutInflater)
+        mBinding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val toolbar : Toolbar = findViewById(R.id.include)
-        setSupportActionBar(toolbar)
-
-        mBinding?.include?.profile?.setOnClickListener {
-            mBinding?.drawerLayout?.openDrawer(GravityCompat.END)
+        mBinding?.root?.setOnClickListener { // 빈공간 클릭시 키보드 내리기
+            hideKeyboard()
         }
 
-    }
-
-    fun setBottomNavigationView() {
-        binding.bottomNavigationView.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.home -> {
-                    //supportFragmentManager.beginTransaction().replace(R.id.mainFrameLayout, ()).commit()
-                    true
-                }
-                else -> false
-            }
+        mBinding?.btBack?.setOnClickListener {
+            finish()
         }
     }
-
-
-
     private fun hideKeyboard() { //키보드 내리는 매소드
         val currentFocusView = currentFocus
         if (currentFocusView != null) {
