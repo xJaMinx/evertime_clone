@@ -4,9 +4,8 @@ import android.os.Bundle
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import com.example.everytime_clone.databinding.ActivityMainBinding
-import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
-
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,13 +27,33 @@ class MainActivity : AppCompatActivity() {
             mBinding?.drawerLayout?.openDrawer(GravityCompat.END)
         }
 
+        setBottomNavigationView()
+        if (savedInstanceState == null) {
+            mBinding?.bottomNavigationView?.selectedItemId = R.id.home
+        }
     }
 
     fun setBottomNavigationView() {
-        binding.bottomNavigationView.setOnItemSelectedListener { item ->
+        mBinding?.bottomNavigationView?.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.home -> {
-                    //supportFragmentManager.beginTransaction().replace(R.id.mainFrameLayout, ()).commit()
+                    supportFragmentManager.beginTransaction().replace(R.id.mainFrameLayout, HomeFragment()).commit()
+                    true
+                }
+                R.id.timetable -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.mainFrameLayout, TimetableFragment()).commit()
+                    true
+                }
+                R.id.noticeboard -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.mainFrameLayout, NoticeboardFragment()).commit()
+                    true
+                }
+                R.id.chatting -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.mainFrameLayout, CheattingFragment()).commit()
+                    true
+                }
+                R.id.campuspick -> {
+                    supportFragmentManager.beginTransaction().replace(R.id.mainFrameLayout, CampuspickFragment()).commit()
                     true
                 }
                 else -> false
